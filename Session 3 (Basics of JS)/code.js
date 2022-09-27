@@ -1,11 +1,11 @@
 // 1. Write a function to find the sum of the elements inside the array
-const sumOfArray = (nums) => console.log(nums.reduce((a, b)=> a + b));
+const sumOfArray = nums => console.log(nums.reduce((a, b)=> a + b));
 
 const arr1 = [1, 2, 3, 4, 5];
 sumOfArray(arr1);
 // 2. Using a function for loop print all even numbers up to n (parameter in function);
 
-const evenNum = (n) =>{
+const evenNum = n =>{
     for (let i = 0; i < n + 1; i++){
         if (i % 2 == 0){
             console.log(i);
@@ -17,7 +17,7 @@ evenNum(20);
 
 // 3. Write a function take a string as a parameter, Check if a string contains the letter “y”. If yes print "YES" and only one time.
     // For example - "Crayzy" "Yes"
-const checkY = (letters) => {
+const checkY = letters => {
 
     for (let i of letters.toLowerCase()) {
         if ( i === "y"){
@@ -31,7 +31,15 @@ checkY("CreaYzY");
 
 // 4. Write a function to find the factorial of a given number n
 
-const factorial = (n) => (n <= 1) ? 1 : n * factorial(n - 1);
+const factorial = n => {
+    if(n < 0){
+      return "Factorial cannot be negtive number";
+    }else if (n <= 0){
+        return 1;
+    }else{
+      return (n * factorial(n-1));
+    }
+  }
      
 console.log(factorial(5));
 
@@ -48,7 +56,17 @@ console.log(factorial(5));
 const gradeCheck = (subA, subB, subC, subD) => {
     const gradeArr = []; 
     gradeArr.push(subA, subB, subC, subD);
-    console.log(gradeArr.reduce((a, b) => (a + b)) / gradeArr.length) ;
+    avgGrade = gradeArr.reduce((a, b) => (a + b)) / gradeArr.length;
+    if (avgGrade < 50) {
+        console.log("F");
+    }else if (avgGrade < 70){
+        console.log("C");
+    }else if (avgGrade < 90){
+        console.log("B");
+    }else{
+        console.log("A");
+    }
+
 }
 
 const java = 90;
@@ -106,7 +124,7 @@ const starPinter2 = n => {
 starPinter2(7);
 
 // 8. Write a function to reverse a string
-const reverseStr = (aStr) => console.log(aStr.split("").reverse().join(""));
+const reverseStr = aStr => console.log(aStr.split("").reverse().join(""));
 
 
 reverseStr("werfg");
