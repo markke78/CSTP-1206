@@ -3,8 +3,8 @@ const sumOfArray = nums => console.log(nums.reduce((a, b)=> a + b));
 
 const arr1 = [1, 2, 3, 4, 5];
 sumOfArray(arr1);
-// 2. Using a function for loop print all even numbers up to n (parameter in function);
 
+// 2. Using a function for loop print all even numbers up to n (parameter in function);
 const evenNum = n =>{
     for (let i = 0; i < n + 1; i++){
         if (i % 2 == 0){
@@ -30,7 +30,6 @@ const checkY = letters => {
 checkY("CreaYzY");
 
 // 4. Write a function to find the factorial of a given number n
-
 const factorial = n => {
     if(n < 0){
       return "Factorial cannot be negtive number";
@@ -43,16 +42,12 @@ const factorial = n => {
      
 console.log(factorial(5));
 
-
 // 5. // Write a function which accepts 4 parameters (different scores of a student for subjects), and
 // then calculate the average of all the score.
 // If the average is more than 90 , then console grade A
 // If the average is between 70 and 90 , then console grade B
 // If the average is between 50-70, then console grade C
 // Other wise console grade F
-
-
-
 const gradeCheck = (subA, subB, subC, subD) => {
     const gradeArr = []; 
     gradeArr.push(subA, subB, subC, subD);
@@ -85,7 +80,6 @@ gradeCheck(java, math, python, database);
 // *****
 // ******
 // *******
-
 const starPinter1 = n => {
     let starts = "";
     for (let i = 0; i < n; i++){
@@ -125,6 +119,5 @@ starPinter2(7);
 
 // 8. Write a function to reverse a string
 const reverseStr = aStr => console.log(aStr.split("").reverse().join(""));
-
 
 reverseStr("werfg");
