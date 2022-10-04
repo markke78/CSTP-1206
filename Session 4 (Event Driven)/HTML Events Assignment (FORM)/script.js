@@ -14,9 +14,7 @@ const toGetForm = () =>{
     localStorage.setItem("th1", "Email");
     localStorage.setItem("th2", "Student id");
     let tableDataLength = 3;
- 
-
-
+     
     if (counter == 0){
 
         const thead = document.createElement("thead");
@@ -30,7 +28,6 @@ const toGetForm = () =>{
 
     }
 
-
     const tr = document.createElement("tr");
 
     let tdClass= counter % 2 === 0 ? "even" : "odd"
@@ -43,10 +40,18 @@ const toGetForm = () =>{
         tr.appendChild(td);
     }
     newTable.appendChild(tr);
+
+    const newTableContainer = document.querySelector("#newTableContainer");
+
+    newTableContainer.appendChild(newTable);
+
+    cleanstring();
+}
+
+const cleanstring = () =>{
+    document.getElementById("fname").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("sid").value = "";
     
-
-const newTableContainer = document.querySelector("#newTableContainer");
-
-newTableContainer.appendChild(newTable);
 }
 
