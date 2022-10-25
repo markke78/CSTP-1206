@@ -48,20 +48,7 @@ function missingNumber(array, n) {
         }
         return sumNum;
     }
-    
 
-
-    
-
-
-
-    const missing=[];
-    for (let i = 0; i < n; i++) {
-        if (array.indexOf(i) === -1) {
-            missing.push(i);
-        }
-    }
-    return missing;
 }
 
 const arr = [3,5,2,1,0,4];
@@ -71,6 +58,17 @@ console.log(missingNumber(arr, n));
 
 
 
-    // const sumNum = (n+1)*n/2;
+    
 
-    // console.log(sumNum);
+
+    
+
+
+
+    // const missing=[];
+    // for (let i = 0; i < n; i++) {
+    //     if (array.indexOf(i) === -1) {
+    //         missing.push(i);
+    //     }
+    // }
+    // return missing;
