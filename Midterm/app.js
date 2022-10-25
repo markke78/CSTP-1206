@@ -24,10 +24,6 @@ Salary: 50000000
 
 app.use(express.json());
 
-// app.get("/", (req, res) => {
-//   res.redirect("/api/employees")
-// })
-
 app.get("/", (req, res) => {
   res.send("Working")
 })
