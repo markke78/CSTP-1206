@@ -1,3 +1,6 @@
+//===========================================================================================
+//Question 1
+//===========================================================================================
 let student = [
 {
 name: "Daniel",
@@ -34,7 +37,9 @@ function studentWithHighestMarks(array) {
 
 console.log(studentWithHighestMarks(student));
 
-
+//===========================================================================================
+//Question 2
+//===========================================================================================
 
 function missingNumber(array, n) {
     return Array.from(Array(n).keys()).filter((i)=> array.indexOf(i)===-1); 
@@ -44,20 +49,3 @@ const arr = [3,2,0,4,6];
 let n = Math.max(...arr);
 console.log(missingNumber(arr, n));
 
-
-
-
-    
-
-
-    
-
-
-
-    // const missing=[];
-    // for (let i = 0; i < n; i++) {
-    //     if (array.indexOf(i) === -1) {
-    //         missing.push(i);
-    //     }
-    // }
-    // return missing;
