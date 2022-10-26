@@ -37,21 +37,10 @@ console.log(studentWithHighestMarks(student));
 
 
 function missingNumber(array, n) {
-    const sumArr = array.reduce((a, b) => a + b, 0);
-    let sumNum = (n+1)*n/2;
-
-    if (sumArr === sumNum){
-        return 0;
-    }else{
-        for(let i of array){
-        sumNum -= i;
-        }
-        return sumNum;
-    }
-
+    return Array.from(Array(n).keys()).filter((i)=> array.indexOf(i)===-1); 
 }
 
-const arr = [3,5,2,1,0,4];
+const arr = [3,2,0,4,6];
 let n = Math.max(...arr);
 console.log(missingNumber(arr, n));
 
