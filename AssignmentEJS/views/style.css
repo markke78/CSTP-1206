@@ -1,0 +1,99 @@
+
+#HEADER {
+
+    margin: 0 auto;
+
+    width: 900px;
+
+    height: 200px;
+
+    background-color: #336699;
+
+}
+
+#WRAPPER {
+
+    margin: 0 auto;
+
+    width: 900px;
+
+    overflow: hidden;
+    /* 當內容的<div>使用 Float 的時候 #WRAPPER 的高度會消失 */
+    /* 使用 overflow:hidden; 即可破解這個問題 */
+
+    background-color: #999999;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#BOX_A {
+
+    width: 170px;
+    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
+
+    float: left;
+    /* 使用 float 做水平排列 */
+
+    background-color: #FFFFCC;
+
+    margin-left: 12px;
+    /* 設定欄位的左邊外間距 */
+}
+
+#BOX_B {
+
+    width: 170px;
+    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
+
+    float: left;
+    /* 使用 float 做水平排列 */
+
+    background-color: #FFFF66;
+
+    margin-left: 12px;
+    /* 設定欄位的左邊外間距 */
+}
+
+#BOX_C {
+
+    width: 170px;
+    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
+
+    float: left;
+    /* 使用 float 做水平排列 */
+
+    background-color: #FFFFCC;
+
+    margin-left: 12px;
+    /* 設定欄位的左邊外間距 */
+}
+
+#BOX_D {
+
+    width: 170px;
+    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
+
+    float: left;
+    /* 使用 float 做水平排列 */
+
+    background-color: #FFFFCC;
+
+    margin-left: 12px;
+    /* 設定欄位的左邊外間距 */
+}
+
+#FOOTER {
+
+    clear: both;
+    /* 當上方的內容使用 float 時，下方的 <div> 會重疊上去的問題 */
+    /* 寫 clear:both; 解除浮動就可以解決這個問題 */
+
+    margin: 0 auto;
+
+    width: 900px;
+
+    height: 200px;
+
+    background-color: #336699;
+
+}
