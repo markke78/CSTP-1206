@@ -27,16 +27,6 @@ app.get("/", (req, res)=>{
 
 
 
-let userInfo = [];
-app.post("/register", urlencodedParser, (req, res)=>{
-    userInfo.push(req.body);
-    return res.status(201).json({
-    message:"Succesfully fetched the details",
-    data: userInfo
-  })
-})
-
-
 
 app.listen(PORT, ()=>{
   console.log(`Server Running at port ${PORT}`);
