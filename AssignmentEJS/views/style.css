@@ -1,99 +1,72 @@
+h1, h2, h3, h4, h5, h5{
+    font-family: 'Noto Sans', sans-serif;;
+}
 
-#HEADER {
+p, a, input, label, textarea, span, ul, li{
+    font-family: 'Noto Sans', sans-serif;
+}
 
-    margin: 0 auto;
+.btn{
+    font-size:5ch;
+    background: #f05f5c;
+    color: white;
+    padding: 30px 70px;
+    border-radius: 20px;
+}
 
-    width: 900px;
+#intro {
+    display: flex;
+    justify-content: center;
+}
 
-    height: 200px;
+#intro .jumbotron{
 
-    background-color: #336699;
+    height: 60vh;
+    width: 70%;
+}
+
+#intro h1{
+    font-size: 52px;
+    font-weight:400;
+    line-height: 1;
+}
+
+#intro .container{
+    text-align: center;
+    position: relative;;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#second{
+    margin-bottom: 30px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+}
+
+
+.social .jumbotron {
+    height: 20vh;
+    width: 70%;
 
 }
 
-#WRAPPER {
-
-    margin: 0 auto;
-
-    width: 900px;
-
-    overflow: hidden;
-    /* 當內容的<div>使用 Float 的時候 #WRAPPER 的高度會消失 */
-    /* 使用 overflow:hidden; 即可破解這個問題 */
-
-    background-color: #999999;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.social .container{
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
-#BOX_A {
 
-    width: 170px;
-    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
 
-    float: left;
-    /* 使用 float 做水平排列 */
-
-    background-color: #FFFFCC;
-
-    margin-left: 12px;
-    /* 設定欄位的左邊外間距 */
-}
-
-#BOX_B {
-
-    width: 170px;
-    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
-
-    float: left;
-    /* 使用 float 做水平排列 */
-
-    background-color: #FFFF66;
-
-    margin-left: 12px;
-    /* 設定欄位的左邊外間距 */
-}
-
-#BOX_C {
-
-    width: 170px;
-    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
-
-    float: left;
-    /* 使用 float 做水平排列 */
-
-    background-color: #FFFFCC;
-
-    margin-left: 12px;
-    /* 設定欄位的左邊外間距 */
-}
-
-#BOX_D {
-
-    width: 170px;
-    /*<div>一定要先設定寬度之後才能使用 float 做水平排列 */
-
-    float: left;
-    /* 使用 float 做水平排列 */
-
-    background-color: #FFFFCC;
-
-    margin-left: 12px;
-    /* 設定欄位的左邊外間距 */
-}
-
-#FOOTER {
-
-    clear: both;
-    /* 當上方的內容使用 float 時，下方的 <div> 會重疊上去的問題 */
-    /* 寫 clear:both; 解除浮動就可以解決這個問題 */
-
-    margin: 0 auto;
-
-    width: 900px;
-
-    height: 200px;
-
-    background-color: #336699;
-
+img {
+    margin: 5px;
 }

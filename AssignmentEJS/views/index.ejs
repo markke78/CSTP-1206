@@ -5,41 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
-    
-    <link href="style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-
-</head>
 <body>
-    <div id="HEADER">
-        
-    </div>
-     
-    <div id="WRAPPER">
-         
-        <div id="BOX_A">
-             
+    <header>
+        <div class='container'>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html"><img src='pictures/logo1.jpg' width='155'></a>
+                <h4 class="display-4">Home Care Service</h4>
+
+            </nav>
         </div>
-         
-        <div id="BOX_B">
-             
+    </header>
+    <section id = 'intro'>
+        <div class='jumbotron'>
+            <div class = 'container'>           
+                <div class ="col-md-12">
+                    <img src='pictures/person.jpg' width='155'>
+                    <p><%= members.name %></p>
+                    <br>
+                    <p>CONGRATULATIOMS</p>
+                    <h1>Account Created</h1>
+                    
+                </div>
+            </div>
         </div>
-         
-        <div id="BOX_C">
-             
+    </section>
+    <section id='second'>
+        <div class="container">
+            <div class='row'>
+                <div class='col-md-8 offset-md-2 text-center'>
+                          
+                        <p class="text-success">Congratulations. Your account has been succesfully created. Please check all your detail information and follow this link below to fonfirm your email address.</p>
+                        <p class="text-primary">Your Name: <%= members.name %></p>
+                        <p class="text-primary">Your Email: <%= members.email %></p>
+                        <p class="text-primary">Your Phone: <%= members.phone %></p>
+                        <p>The deadline for this change will be <%= members.joinDate %> after this date, we won't be accepting.</p>
+                        
+
+                    <a class="btn" href="#">confirm</a>
+                </div>
+                <div>
+                </div>
+
+    
+    </section>
+
+
+    <footer class="social">
+        <div class='jumbotron'>
+            <div class='container'>
+                <div id="inside" class="col-md-12">
+                    <% for(i of socialMedia){ %>
+                        <a href="<%= i.href %>"><img src="<%= i.img %>" width="50px" /></a>
+                    <% } %>
+                </div>
+            </div>
         </div>
-         
-        <div id="BOX_D">
-             
-        </div>
-         
-    </div>
-     
-    <div id="FOOTER">
-         
-    </div>
+    
+
+    </footer>
+
+
 
 </body>
+
+
 </html>
