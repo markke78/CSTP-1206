@@ -45,7 +45,7 @@ const displayIssues = (issues) => {
 
         let innerCard = document.createElement("div");
         innerCard.className = "h4";
-        innerCard.textContent ="Username: " +  issue.user.login;
+        innerCard.textContent = issue.user.login;
         second.appendChild(innerCard)
 
         let innerP = document.createElement("p");
