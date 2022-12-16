@@ -1,14 +1,28 @@
 const baseURL = "https://api.github.com/repos/reactjs/reactjs.org/issues";
 const issuecard = document.getElementById("cards");
+const searchBar = document.getElementById("searchBar");
+let dataInJSON = [];
+
+searchBar.addEventListener("keyup", (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredIssue = dataInJSON.filter((issue) => {
+        return (issue.user.login).toLowerCase().includes(searchString);
+
+    });
+
+    displayIssues(filteredIssue);
+
+});
 
 const getAllIssues = async () => {
     const data = await fetch(baseURL);
-    const dataInJSON = await data.json();
-    console.log(dataInJSON)
-    
-    console.log(dataInJSON[0].user.avatar_url);
+    dataInJSON = await data.json();
+    displayIssues(dataInJSON);
+}
 
-    for(let data of dataInJSON){
+const displayIssues = (issues) => {
+    issuecard.innerHTML = "";
+        for(let issue of issues){
         let firstLevel = document.createElement("div");
         firstLevel.className="col-md-3 mb-md-3 mb-3";
         issuecard.appendChild(firstLevel);    
@@ -22,7 +36,7 @@ const getAllIssues = async () => {
         let image = document.createElement("img");
         image.setAttribute(
             'src',
-            data.user.avatar_url,
+            issue.user.avatar_url,
         );
         image.setAttribute('alt', 'nature');
         image.className="rounded-circle";
@@ -31,17 +45,16 @@ const getAllIssues = async () => {
 
         let innerCard = document.createElement("div");
         innerCard.className = "h4";
-        innerCard.textContent ="Username: " +  data.user.login;
+        innerCard.textContent ="Username: " +  issue.user.login;
         second.appendChild(innerCard)
 
         let innerP = document.createElement("p");
         innerP.className = "designation text-muted text-uppercase";
         innerP.textContent = "Web Developer";
         second.appendChild(innerP)
-    }   
-
+    }  
 }
 
-
 getAllIssues();
+
 
